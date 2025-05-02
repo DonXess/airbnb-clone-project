@@ -186,6 +186,39 @@ Implements indexing and caching strategies to boost performance and reduce datab
 ### 🔐 API Documentation & Security
 APIs are documented using the OpenAPI standard and secured with token-based authentication. This ensures ease of integration for frontend developers and protection against unauthorized access.
 
+
+
+
+## 🔐 API Security
+
+Security is a critical component of the Airbnb Clone project to protect sensitive user data, ensure secure transactions, and prevent malicious activities. The following key security measures are implemented to safeguard the backend APIs:
+
+### 🔑 Authentication
+We use token-based authentication (e.g., JWT) to verify the identity of users before granting access to protected endpoints. This prevents unauthorized users from accessing sensitive data or performing restricted actions.
+
+### 🔓 Authorization
+Role-based access control ensures that only authorized users (e.g., hosts, guests, admins) can perform specific actions. For example, only hosts can create or modify property listings, and only guests can make bookings or post reviews.
+
+### 🚫 Rate Limiting
+Rate limiting is applied to prevent abuse of the API through excessive requests. This protects the system from denial-of-service (DoS) attacks and helps maintain service availability and performance.
+
+### 🔒 Secure Data Transmission
+All API traffic is encrypted via HTTPS to protect data in transit, such as login credentials and payment details, from interception by malicious actors.
+
+### 🧼 Input Validation & Sanitization
+User inputs are validated and sanitized to prevent common vulnerabilities like SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF).
+
+### 📄 Logging and Monitoring
+Security-related events such as failed login attempts and suspicious activity are logged and monitored. This helps in early detection of breaches and enables quick incident response.
+
+### 💳 Payment Security
+Sensitive payment details are never stored directly and are processed securely via integration with trusted third-party payment gateways. This ensures PCI-DSS compliance and reduces the risk of financial data leaks.
+
+Each of these measures contributes to building a secure, trustworthy, and resilient backend system that protects users, their data, and the overall platform integrity.
+
+
+
+
 ### 🔁 CI/CD Integration
 Includes automated pipelines for testing and deploying code using tools like GitHub Actions. This streamlines the development workflow, reduces errors, and ensures that only tested, stable code reaches production.
 
