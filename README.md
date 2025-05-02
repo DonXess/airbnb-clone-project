@@ -74,3 +74,90 @@ A containerization platform used to create reproducible, isolated environments f
 ### 🔄 CI/CD Pipelines (GitHub Actions or similar)
 Continuous Integration and Continuous Deployment pipelines are set up to automatically test, build, and deploy the application, minimizing manual errors and improving development speed.
 
+
+
+## 🗄️ Database Design
+
+The database schema is designed to reflect the real-world structure and workflows of a property rental platform. Below are the core entities, their attributes, and relationships.
+
+### 👤 Users
+**Purpose:** Represents platform users, including both guests and hosts.
+
+**Key Fields:**
+- `id`: Primary key
+- `username`: Unique username
+- `email`: User email address
+- `password`: Encrypted password
+- `role`: Host or guest
+
+**Relationships:**
+- A user can list multiple properties (if a host).
+- A user can make multiple bookings (if a guest).
+- A user can leave multiple reviews.
+
+---
+
+### 🏠 Properties
+**Purpose:** Represents listings created by hosts.
+
+**Key Fields:**
+- `id`: Primary key
+- `title`: Name/title of the property
+- `description`: Detailed description
+- `location`: Address or city
+- `price_per_night`: Cost of one night
+
+**Relationships:**
+- A property belongs to one user (host).
+- A property can have multiple bookings.
+- A property can receive multiple reviews.
+
+---
+
+### 📅 Bookings
+**Purpose:** Represents a guest’s reservation of a property.
+
+**Key Fields:**
+- `id`: Primary key
+- `user_id`: Foreign key (guest)
+- `property_id`: Foreign key (property)
+- `start_date`: Check-in date
+- `end_date`: Check-out date
+
+**Relationships:**
+- A booking is made by one user.
+- A booking is for one property.
+- A booking can have one payment record.
+
+---
+
+### 💳 Payments
+**Purpose:** Represents payment details for a booking.
+
+**Key Fields:**
+- `id`: Primary key
+- `booking_id`: Foreign key
+- `amount`: Payment amount
+- `status`: Paid, pending, failed
+- `transaction_date`: Date of transaction
+
+**Relationships:**
+- A payment is linked to one booking.
+
+---
+
+### ✍️ Reviews
+**Purpose:** Represents reviews submitted by users for properties.
+
+**Key Fields:**
+- `id`: Primary key
+- `user_id`: Foreign key (reviewer)
+- `property_id`: Foreign key
+- `rating`: Numerical rating
+- `comment`: Review text
+
+**Relationships:**
+- A review is written by one user.
+- A review is linked to one property.
+
+
