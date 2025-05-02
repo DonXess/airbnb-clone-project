@@ -161,3 +161,33 @@ The database schema is designed to reflect the real-world structure and workflow
 - A review is linked to one property.
 
 
+## 🧩 Feature Breakdown
+
+This section highlights the key features implemented in the Airbnb Clone backend, each contributing to the core functionality and user experience of the platform.
+
+### 👥 User Management
+Allows users to register, authenticate, and manage their profiles securely. It supports user roles (e.g., host and guest) and ensures secure access to different parts of the application through token-based authentication.
+
+### 🏠 Property Management
+Enables hosts to create, update, and delete property listings. This feature is crucial for maintaining accurate and up-to-date listings, allowing guests to browse available rental options easily.
+
+### 📆 Booking System
+Facilitates the reservation process by letting users book available properties for specific dates. It includes check-in/check-out management and prevents double-booking through validation.
+
+### 💳 Payment Processing
+Handles secure transaction recording and booking payments. Integrates with payment gateways to process transactions and maintains payment statuses (e.g., pending, completed).
+
+### ⭐ Review System
+Allows guests to leave ratings and written reviews for properties after their stay. This fosters transparency and helps future guests make informed decisions based on previous experiences.
+
+### ⚡ Data Optimization
+Implements indexing and caching strategies to boost performance and reduce database load. These optimizations ensure faster response times and a smoother user experience, especially under high traffic.
+
+### 🔐 API Documentation & Security
+APIs are documented using the OpenAPI standard and secured with token-based authentication. This ensures ease of integration for frontend developers and protection against unauthorized access.
+
+### 🔁 CI/CD Integration
+Includes automated pipelines for testing and deploying code using tools like GitHub Actions. This streamlines the development workflow, reduces errors, and ensures that only tested, stable code reaches production.
+
+
+
