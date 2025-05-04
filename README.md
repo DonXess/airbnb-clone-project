@@ -1,5 +1,7 @@
 # airbnb-clone-project
 
+## Project overview
+
 This project is a backend implementation of a simplified Airbnb-style platform. It delivers essential features like user authentication, property management, booking functionality, payment processing, and user reviews, built with modern frameworks and best development practices.
 
 ## 👥 Team Roles
